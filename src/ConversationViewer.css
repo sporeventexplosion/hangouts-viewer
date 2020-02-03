@@ -1,0 +1,52 @@
+.cv-message-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 960px;
+}
+
+.cv-message {
+  margin: 0 1em;
+  padding: 0.8em 2em;
+  margin: 1em 0 0;
+}
+
+.cv-message img {
+  max-width: 100%;
+}
+
+.cv-name {
+  font-weight: 700;
+  margin-right: 0.2em;
+}
+
+.cv-timestamp {
+  font-size: 0.7em;
+}
+
+.cv-chat-box {
+  background-color: #eee;
+  border: 1px solid #ddd;
+  padding: 0.4em;
+}
+
+.cv-chat-text {
+  white-space: pre-wrap;
+}
+
+.cv-non-text {
+  color: #f00;
+  font-weight: 700;
+  background-color: #bbb;
+  padding: 0.6em;
+  margin-bottom: 0.5em;
+}
+
+.cv-hangout-event {
+  color: #060;
+  font-style: italic;
+  background-color: #bbb;
+  padding: 0.6em;
+  margin-bottom: 0.5em;
+}

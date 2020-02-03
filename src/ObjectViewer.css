@@ -1,0 +1,70 @@
+.obj-viewer {
+  font-family: monospace;
+  cursor: default;
+}
+
+.obj-value {
+  display: inline-block;
+}
+
+.obj-list {
+  margin: 0;
+  padding: 0 0 0 1em;
+  list-style: none;
+  border-left: 1px solid #ccc;
+}
+
+.obj-number,
+.obj-boolean {
+  color: #1c00cf;
+}
+
+.obj-string,
+.obj-symbol {
+  color: #c41a16;
+}
+
+.obj-undefined {
+  color: #808080;
+}
+
+.obj-function,
+.obj-object,
+.obj-array {
+  font-style: italic;
+}
+
+.obj-unknown {
+  color: #f00;
+}
+
+.obj-attr-name {
+  color: #881391
+}
+
+.obj-viewer-info:before {
+  content: '';
+  margin-right: 14px;
+}
+
+.subtree-show:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 4px solid transparent;
+  border-right: 4px solid transparent;
+  border-top: 6px solid #777;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.subtree-hide:before {
+  content: '';
+  width: 0;
+  height: 0;
+  border-left: 6px solid #777;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  display: inline-block;
+  margin-right: 8px;
+}
