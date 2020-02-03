@@ -6,6 +6,8 @@ import ObjectViewer from './ObjectViewer';
 import ConversationList from './ConversationList';
 import ConversationViewer from './ConversationViewer';
 
+console.log(ConversationList);
+
 class App extends Component {
   constructor(props) {
     super(props);

@@ -30,7 +30,7 @@ function getMessage(msg) {
 }
 
 function generateFallbackNameList(conv) {
-  const data = conv.conversation_state.conversation.participant_data;
+  const data = conv.conversation.conversation.participant_data;
   const ret = {};
   data.forEach(p => ret[p.id.chat_id] = (p.fallback_name || '[Unknown]'));
   return ret;
@@ -52,7 +52,7 @@ class ConversationViewer extends Component {
       limit: DEFAULT_LIMIT
     };
     try {
-      let oc = getSortedConversation(props.conversation.conversation_state.event);
+      let oc = getSortedConversation(props.conversation.events);
       state.orderedConversation = oc;
       state.fallbackNames = generateFallbackNameList(props.conversation);
       this.state = state;
@@ -66,7 +66,7 @@ class ConversationViewer extends Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.conversation !== this.props.conversation) {
       try {
-        let oc = getSortedConversation(nextProps.conversation.conversation_state.event || []);
+        let oc = getSortedConversation(nextProps.conversation.events || []);
         let fallbackNames = generateFallbackNameList(nextProps.conversation);
         this.setState({
           orderedConversation: oc,
